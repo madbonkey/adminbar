@@ -4,7 +4,7 @@ A WordPress-style Frontend-Adminbar for PyroCMS
 
 ## Installation
 
-Put `adminbar.php` in `addons/default/plugins` or `addons/default/plugins`
+Put `adminbar.php` in `addons/default/plugins` or `addons/shared_addons/plugins`
 
 ## Usage
 
