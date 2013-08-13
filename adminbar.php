@@ -57,11 +57,13 @@ class Plugin_Adminbar extends Plugin {
 		$left_menu .= sprintf($link, site_url('admin'), 'Dashboard', 'Admin-Bereich',
 			sprintf($submenu, $contents)
 		);
-		$left_menu .= sprintf($link, site_url('admin/pages/create'), 'Seite erstellen', '&plus; Neue Seite', '');
+		$new = sprintf($link, site_url('admin/pages/create'), 'Neue Seite', 'Neue Seite', '');
+		$new .= sprintf($link, site_url('admin/blog/create'), 'Neuer Artikel', 'Neuer Artikel', '');
+
+		$left_menu .= sprintf($link, '#', 'Neue Inhalte erstellen', '&plus; Erstellen', sprintf($submenu, $new));
 		if($this->template->page) {
 			$left_menu .= sprintf($link, site_url('admin/pages/edit/'.$this->template->page->id), '\''.$this->template->page->title.'\' bearbeiten', 'Seite bearbeiten', '');
 		} elseif($this->controller === 'blog') {
-			$left_menu .= sprintf($link, site_url('admin/blog/create'), 'Artikel erstellen', 'Artikel erstellen', '');
 			switch($this->method) {
 				case 'view':
 					$left_menu .= sprintf($link, site_url('admin/blog/edit/'.$this->template->post[0]['id']), 'Artikel bearbeiten', 'Artikel bearbeiten', '');
