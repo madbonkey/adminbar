@@ -6,6 +6,7 @@
 class Plugin_Adminbar extends Plugin {
 
 	private function _auth() {
+		# is this a good way to ensure authenticated access?
 		if(!isset($this->current_user->active)) return false;
 		$this->lang->load(array('global', 'pages/pages', 'blog/blog'));
 		return true;
@@ -13,6 +14,8 @@ class Plugin_Adminbar extends Plugin {
 
 	public function show() {
 		if(!$this->_auth()) return;
+		
+		# how to better 'template' this?
 		$wrap = '<div id="pcms_admin_bar"><ul id="menu_left">%s</ul><ul id="menu_right">%s</ul></div>';
 		$item = '<li><span class="generic">%s</span></li>';
 		$link = '<li><a href="%s" title="%s">%s</a>%s</li>';
@@ -76,6 +79,8 @@ class Plugin_Adminbar extends Plugin {
 
 	public function assets() {
 		if(!$this->_auth()) return;
+		
+		# this is just plain uglay
 		$css = str_replace(
 			'###FAVICON###',
 			'data:image/x-icon;base64,'.base64_encode( file_get_contents( site_url('favicon.ico') ) ),
