@@ -16,8 +16,8 @@ class Plugin_Adminbar extends Plugin {
 	}
 
 	public function debug() {
-		return;
-		# return sprintf("<pre>%s</pre>", print_r($this->template, true));
+
+		return sprintf("<pre>%s</pre>", date("d.m.Y", 1376466965));
 	}
 
 	public function show() {
@@ -74,7 +74,7 @@ class Plugin_Adminbar extends Plugin {
 					break 1;
 			}
 		}
-		$right_menu .= sprintf($item, 'Hallo, '.$this->current_user->first_name.' '.$this->current_user->last_name);
+		$right_menu .= sprintf($item, sprintf(lang('logged_in_welcome'), $this->current_user->first_name.' '.$this->current_user->last_name));
 		$right_menu .= sprintf($link, site_url('admin/logout'), lang('logout_label'), lang('logout_label'), '');
 		return sprintf($wrap, $left_menu, $right_menu);
 	}
