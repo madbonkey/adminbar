@@ -5,18 +5,10 @@
 */
 class Plugin_Adminbar extends Plugin {
 
-	private $ci;
-
 	private function _auth() {
 		if(!isset($this->current_user->active)) return false;
-		$this->lang->load('global');
-		$this->lang->load('pages/pages');
-		$this->lang->load('blog/blog');
+		$this->lang->load(array('global', 'pages/pages', 'blog/blog'));
 		return true;
-	}
-
-	public function debug() {
-		return;// sprintf("<pre>%s</pre>", date("d.m.Y", 1376466965));
 	}
 
 	public function show() {
@@ -25,9 +17,11 @@ class Plugin_Adminbar extends Plugin {
 		$item = '<li><span class="generic">%s</span></li>';
 		$link = '<li><a href="%s" title="%s">%s</a>%s</li>';
 		$submenu = '<ul class="submenu">%s</ul>';
+
 		$left_menu = '';
 		$right_menu = '';
 		$contents = '';
+
 		$modules = $this->module_m->get_all(array(
 				'is_backend' => true,
 				'group' => $this->current_user->group,
@@ -45,14 +39,17 @@ class Plugin_Adminbar extends Plugin {
 		foreach ($active_modules as $m) {
 			$contents .= sprintf($link, site_url('admin/'.$m['slug']), $m['name'], $m['name'], '');
 		}
+
 		$contents .= sprintf($link, site_url('admin/settings'), lang('settings_label'), lang('settings_label'), '' );
+
 		$left_menu .= sprintf($link, site_url('admin'), lang('global:control-panel'), '<span class="favicon"></span> '.lang('global:control-panel'),
 			sprintf($submenu, $contents)
 		);
+
 		$new = sprintf($link, site_url('admin/pages/create'), lang('pages:create_title'), lang('pages:create_title'), '');
 		$new .= sprintf($link, site_url('admin/blog/create'), lang('blog:create_title'), lang('blog:create_title'), '');
-
 		$left_menu .= sprintf($link, '#', lang('global:add'), lang('global:add').' …', sprintf($submenu, $new));
+
 		if($this->template->page) {
 			$left_menu .= sprintf($link, site_url('admin/pages/edit/'.$this->template->page->id), sprintf(lang('pages:edit_title'), $this->template->page->title), sprintf(lang('pages:edit_title'), $this->template->page->title), '');
 		} elseif($this->controller === 'blog') {
@@ -68,7 +65,6 @@ class Plugin_Adminbar extends Plugin {
 					break 1;
 				case 'index':
 				case 'category':
-					break 1;
 				default:
 					break 1;
 			}
@@ -94,6 +90,7 @@ class Plugin_Adminbar extends Plugin {
 #pcms_admin_bar #menu_left .submenu a,#pcms_admin_bar #menu_right .submenu a{color:#333;border:none;background:#fff;height:28px;line-height:28px;}
 #pcms_admin_bar #menu_left .submenu a:hover,#pcms_admin_bar #menu_right .submenu a:hover{color:#000;background:#efefef;}
 #pcms_admin_bar #menu_right{float:right;}
+
 
 '
 		);
