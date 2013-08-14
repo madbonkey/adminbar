@@ -16,3 +16,5 @@ Put `adminbar.php` in `addons/default/plugins` or `addons/shared_addons/plugins`
 - Add more "New X"
 - Make Multilanguage *done*
 - Make Module-aware *done*
+
+![Screenshot](https://bitbucket.org/hypemedia/pyrocms-adminbar/raw/81b40e84cf91a720b1925b6c05c0a19c9db8800b/adminbar.png)
