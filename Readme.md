@@ -1,5 +1,7 @@
 # PyroCMS Adminbar
 
+![The Bar](http://nicolasschneider.com/work/pyrocms-adminbar/bar-screen.png)
+
 A WordPress-style Frontend-Adminbar for PyroCMS. There are several areas in the bar:
 
 1. Control-panel button: This one has a dropdown with every enabled, installed, 'content'-Module that has a backend.
