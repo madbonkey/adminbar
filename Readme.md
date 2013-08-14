@@ -14,5 +14,5 @@ Put `adminbar.php` in `addons/default/plugins` or `addons/shared_addons/plugins`
 ## Todo
 
 - Add more "New X"
-- -Make Multilanguage-
-- -Make Module-aware-
+- Make Multilanguage *done*
+- Make Module-aware *done*
