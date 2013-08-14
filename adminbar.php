@@ -69,7 +69,7 @@ class Plugin_Adminbar extends Plugin {
 					break 1;
 			}
 		}
-		$right_menu .= sprintf($item, sprintf(lang('logged_in_welcome'), $this->current_user->first_name.' '.$this->current_user->last_name));
+		$right_menu .= sprintf($item, sprintf(lang('logged_in_welcome'), $this->current_user->display_name));
 		$right_menu .= sprintf($link, site_url('admin/logout'), lang('logout_label'), lang('logout_label'), '');
 		return sprintf($wrap, $left_menu, $right_menu);
 	}
