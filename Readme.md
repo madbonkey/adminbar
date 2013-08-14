@@ -28,10 +28,10 @@ Put `adminbar.php` in `addons/default/plugins`, `addons/<site_ref>/plugins` or `
 
 ## Screenshots
 
-![Screenshot](http://nicolasschneider.com/work/adminbar/pyro-adminbar-000.png)
-![Screenshot](http://nicolasschneider.com/work/adminbar/pyro-adminbar-001.png)
-![Screenshot](http://nicolasschneider.com/work/adminbar/pyro-adminbar-002.png)
-![Screenshot](http://nicolasschneider.com/work/adminbar/pyro-adminbar-003.png)
-![Screenshot](http://nicolasschneider.com/work/adminbar/pyro-adminbar-004.png)
-![Screenshot](http://nicolasschneider.com/work/adminbar/pyro-adminbar-005.png)
-![Screenshot](http://nicolasschneider.com/work/adminbar/pyro-adminbar-006.png)
+![Screenshot](http://nicolasschneider.com/work/pyrocms-adminbar/pyro-adminbar-000.png)
+![Screenshot](http://nicolasschneider.com/work/pyrocms-adminbar/pyro-adminbar-001.png)
+![Screenshot](http://nicolasschneider.com/work/pyrocms-adminbar/pyro-adminbar-002.png)
+![Screenshot](http://nicolasschneider.com/work/pyrocms-adminbar/pyro-adminbar-003.png)
+![Screenshot](http://nicolasschneider.com/work/pyrocms-adminbar/pyro-adminbar-004.png)
+![Screenshot](http://nicolasschneider.com/work/pyrocms-adminbar/pyro-adminbar-005.png)
+![Screenshot](http://nicolasschneider.com/work/pyrocms-adminbar/pyro-adminbar-006.png)
