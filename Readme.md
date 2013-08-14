@@ -25,6 +25,7 @@ Put `adminbar.php` in `addons/default/plugins`, `addons/<site_ref>/plugins` or `
 - Make Module-aware *done*
 - Make Permissions-aware (currently the adminbar displays whenever there is an active, logged-in user)
 - Add an Events trigger so other people can add content to this thing
+- Move away from WordPress-style, because.
 - …
 
 ## Screenshots
